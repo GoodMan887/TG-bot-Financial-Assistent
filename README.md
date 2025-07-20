@@ -21,16 +21,16 @@
 <img src="images/start.jpg" width="45%">
 
 ### Запись расходов
-<img src="images/write_down_expense_1.jpg" width="45%">
-<img src="images/write_down_expense_2.jpg" width="45%">
+<img src="images/write_down_expense_1.jpg" style="width: 45%; display: inline-block; margin-right: 1%;">
+<img src="images/write_down_expense_2.jpg" style="width: 45%; display: inline-block;">
 
 ### Статистика
-<img src="images/statistics_interval.jpg" width="45%">
-<img src="images/statistics.jpg" width="45%">
+<img src="images/statistics_interval.jpg" style="width: 45%; display: inline-block; margin-right: 1%;">
+<img src="images/statistics.jpg" style="width: 45%; display: inline-block;">
 
 ### Основные траты
-<img src="images/basic_expense_interval.jpg" width="45%">
-<img src="images/basic_expense.jpg" width="45%">
+<img src="images/basic_expense_interval.jpg" style="width: 45%; display: inline-block; margin-right: 1%;">
+<img src="images/basic_expense.jpg" style="width: 45%; display: inline-block;">
 
 ### Диаграммы
 
