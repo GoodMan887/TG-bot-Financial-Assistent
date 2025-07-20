@@ -19,7 +19,6 @@ ENV/
 
 # ==== Matplotlib/graph/plot temp images ====
 *.png
-*.jpg
 *.svg
 *.pdf
 tempfile*
