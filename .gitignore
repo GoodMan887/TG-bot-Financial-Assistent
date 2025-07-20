@@ -1,0 +1,42 @@
+# ==== Python bytecode ====
+pycache/
+*.py[cod]
+*.pyo
+
+# ==== Virtual environments ====
+venv/
+env/
+.venv/
+ENV/
+
+# ==== Environment / Secrets ====
+.env
+
+# ==== Logs and debug ====
+*.log
+*.tmp
+*.bak
+
+# ==== Matplotlib/graph/plot temp images ====
+*.png
+*.jpg
+*.svg
+*.pdf
+tempfile*
+tmp_*.*
+*.gif
+
+# ==== OS-specific ====
+.DS_Store
+Thumbs.db
+
+# ==== Editor-specific ====
+.idea/
+
+# ==== Test cache / Pip cache ====
+.cache/
+.pytest_cache/
+pip-wheel-metadata/
+dist/
+build/
+*.egg-info/
