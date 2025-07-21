@@ -41,5 +41,5 @@
 1. Клонируй проект:
 ``` git clone https://github.com/GoodMan887/TG-bot-Financial-Assistent ```
 2. Установи зависимости: ```pip install -r requirements.txt```
-3. Создай .env файл и добавь в него свой Telegram токен : BOT_TOKEN=your_token_here
+3. Создай .env файл и добавь в него свой Telegram токен : `BOT_TOKEN=your_token_here`
 4. Запусти бота: ```python main.py```
