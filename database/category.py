@@ -3,6 +3,10 @@ import psycopg2
 from database.connection import connect_db
 
 
+def is_valid_category_name(name: str) -> bool:
+    return 1 <= len(name.strip()) <= 50
+
+
 def get_category_name_by_id(category_id: int) -> str | None:
     """
     Получает название категории по её уникальному ID.

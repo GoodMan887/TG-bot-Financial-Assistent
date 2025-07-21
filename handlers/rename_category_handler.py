@@ -1,10 +1,10 @@
 from telebot import TeleBot, types
 
-from database.category import rename_category_in_db
+from database.category import is_valid_category_name, rename_category_in_db
 from inline_keyboard.categories import category_kb
 from messages import (choose_category, choose_category_error, delete_msg_error,
                       rename_category_error, rename_category_msg,
-                      rename_category_success)
+                      rename_category_success, valid_category_name)
 from states import UserState
 
 
@@ -97,6 +97,14 @@ def rename_category(message: types.Message, bot: TeleBot):
     if category_id is None:
         bot.send_message(message.chat.id, choose_category_error) # Сообщение об ошибке
         bot.set_state(message.chat.id, UserState.DEFAULT) # Сбрасываем состояние
+        return
+
+    if not is_valid_category_name(message.text):
+        bot.send_message(
+            chat_id=message.chat.id,
+            text=valid_category_name
+        )
+        bot.set_state(message.chat.id, UserState.DEFAULT)
         return
 
     # Пытаемся переименовать категорию в базе данных

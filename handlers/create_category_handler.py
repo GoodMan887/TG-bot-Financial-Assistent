@@ -1,9 +1,10 @@
 from telebot import TeleBot, types
 
-from database.category import create_category
+from database.category import create_category, is_valid_category_name
 from database.user_data import find_user_id_by_telegram_id
 from messages import (create_category_error, create_category_message,
-                      create_category_success, error_user_not_found)
+                      create_category_success, error_user_not_found,
+                      valid_category_name)
 from states import UserState
 
 
@@ -46,6 +47,14 @@ def save_new_category(message: types.Message, bot: TeleBot):
         return
 
     category_name = message.text
+
+    if not is_valid_category_name(category_name):
+        bot.send_message(
+            chat_id=message.chat.id,
+            text=valid_category_name
+        )
+        bot.set_state(message.chat.id, UserState.DEFAULT)
+        return
 
     # Пытаемся создать категорию в базе данных
     if create_category(user_id, category_name):
