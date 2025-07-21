@@ -1,6 +1,8 @@
 from datetime import datetime
-from database.connection import connect_db
+
 import psycopg2
+
+from database.connection import connect_db
 
 
 def delete_old_deleted_categories():

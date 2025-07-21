@@ -1,17 +1,13 @@
 from telebot import TeleBot, types
 
-from messages import (
-    write_down_expense_msg,
-    error_user_not_found,
-    write_down_expense_choose_category_msg,
-    write_down_expense_success,
-    write_down_expense_error,
-    enter_amount_error,
-)
-from states import UserState
-from database.user_data import find_user_id_by_telegram_id
 from database.expenses import write_down_expense
+from database.user_data import find_user_id_by_telegram_id
 from inline_keyboard.categories import category_kb
+from messages import (enter_amount_error, error_user_not_found,
+                      write_down_expense_choose_category_msg,
+                      write_down_expense_error, write_down_expense_msg,
+                      write_down_expense_success)
+from states import UserState
 
 
 def handle_expense_button(message: types.Message, bot: TeleBot):

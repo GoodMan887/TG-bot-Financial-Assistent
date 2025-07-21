@@ -1,5 +1,6 @@
 from telebot.handler_backends import State, StatesGroup
 
+
 class UserState(StatesGroup):
     """
     Класс, определяющий состояния пользователя в конечных автоматах бота.

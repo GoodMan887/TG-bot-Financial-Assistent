@@ -1,7 +1,8 @@
 from telebot import types
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
-from database.user_data import find_user_id_by_telegram_id
-from database.user_data import get_user_categories_names_and_ids
+
+from database.user_data import (find_user_id_by_telegram_id,
+                                get_user_categories_names_and_ids)
 
 
 def category_kb(message: types.Message, callback_prefix: str) -> InlineKeyboardMarkup:

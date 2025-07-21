@@ -1,11 +1,13 @@
-import telebot
 import threading
 import time
+
+import telebot
 from telebot.storage import StateMemoryStorage
 
 from config import BOT_TOKEN
-from handlers.register import register_all_handlers
 from database.clean_old_categories import delete_old_deleted_categories
+from handlers.register import register_all_handlers
+from keep_alive import keep_alive
 
 # Инициализируем хранилище состояний FSM
 storage = StateMemoryStorage()
@@ -42,4 +44,5 @@ def start_cleanup_scheduler():
 
 if __name__ == '__main__':
     start_cleanup_scheduler()
+    keep_alive()
     bot.infinity_polling(skip_pending=True)

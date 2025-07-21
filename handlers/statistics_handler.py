@@ -2,18 +2,15 @@ import os
 
 from telebot import TeleBot, types
 
+from charts.statistics_charts import generate_expense_charts
+from charts.top_categories_charts import generate_top_categories_pie
 from config import days_for_statistics
 from database.expenses import get_top_categories_and_other_sum
 from database.statistics import full_statistics
 from database.user_data import find_user_id_by_telegram_id
 from inline_keyboard.statistics import create_time_interval_markup
-from messages import (
-    select_statistics_interval,
-    error_user_not_found,
-    statistics_error,
-)
-from charts.statistics_charts import generate_expense_charts
-from charts.top_categories_charts import generate_top_categories_pie
+from messages import (error_user_not_found, select_statistics_interval,
+                      statistics_error)
 from time_interval import get_time_interval
 
 

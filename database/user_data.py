@@ -1,5 +1,6 @@
-from database.connection import connect_db
 import psycopg2
+
+from database.connection import connect_db
 
 
 def add_or_update_user(telegram_id: int, username: str | None, first_name: str | None, last_name: str | None) -> None:

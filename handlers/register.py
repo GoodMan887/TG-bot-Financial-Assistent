@@ -1,33 +1,19 @@
 from telebot import TeleBot
-from handlers.create_category_handler import (
-    handle_create_category_button,
-    save_new_category,
-)
-from handlers.delete_category_handler import (
-    handle_delete_category_button,
-    handler_category_selection_for_delete,
-    delete_category,
-)
-from handlers.rename_category_handler import (
-    handle_rename_category_button,
-    handle_category_selection_for_rename,
-    rename_category,
-)
-from handlers.start import (
-    handle_command_start,
-    echo_msg,
-)
-from handlers.expenses_handler import (
-    handle_expense_button,
-    write_expenses,
-    handle_category_selection_for_expense,
-)
-from handlers.statistics_handler import (
-    handle_statistics_button,
-    handle_statistics_interval_callback,
-    handle_basic_expenses_button,
-)
 
+from handlers.create_category_handler import (handle_create_category_button,
+                                              save_new_category)
+from handlers.delete_category_handler import (
+    delete_category, handle_delete_category_button,
+    handler_category_selection_for_delete)
+from handlers.expenses_handler import (handle_category_selection_for_expense,
+                                       handle_expense_button, write_expenses)
+from handlers.rename_category_handler import (
+    handle_category_selection_for_rename, handle_rename_category_button,
+    rename_category)
+from handlers.start import echo_msg, handle_command_start
+from handlers.statistics_handler import (handle_basic_expenses_button,
+                                         handle_statistics_button,
+                                         handle_statistics_interval_callback)
 
 # --- Функции регистрации обработчиков сообщений ---
 

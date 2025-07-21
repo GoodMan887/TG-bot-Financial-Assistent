@@ -1,18 +1,13 @@
-from telebot import types, TeleBot
+from telebot import TeleBot, types
 
-from database.category import get_category_name_by_id
-from database.category import delete_category_func
+from database.category import delete_category_func, get_category_name_by_id
 from inline_keyboard.categories import category_kb
 from inline_keyboard.delete_confirmation import delete_category_confirmation
-from messages import (
-    choose_category,
-    choose_category_error,
-    delete_category_confirmation_msg,
-    error_category_not_found,
-    delete_category_success,
-    delete_msg_error,
-    delete_category_cancel_msg,
-)
+from messages import (choose_category, choose_category_error,
+                      delete_category_cancel_msg,
+                      delete_category_confirmation_msg,
+                      delete_category_success, delete_msg_error,
+                      error_category_not_found)
 from states import UserState
 
 

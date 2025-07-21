@@ -1,5 +1,6 @@
-from database.connection import connect_db
 import psycopg2
+
+from database.connection import connect_db
 
 
 def write_down_expense(user_id: int, category_id: int, amount: float):

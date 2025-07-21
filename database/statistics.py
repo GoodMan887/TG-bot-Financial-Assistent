@@ -1,5 +1,6 @@
-from database.connection import connect_db
 import psycopg2
+
+from database.connection import connect_db
 
 
 def statistics_for_week_or_month(user_id: int, start_date: str, end_date: str):

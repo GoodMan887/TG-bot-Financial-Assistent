@@ -1,15 +1,10 @@
-from telebot import types, TeleBot
+from telebot import TeleBot, types
 
 from database.category import rename_category_in_db
 from inline_keyboard.categories import category_kb
-from messages import (
-    rename_category_msg,
-    rename_category_success,
-    rename_category_error,
-    delete_msg_error,
-    choose_category_error,
-    choose_category,
-)
+from messages import (choose_category, choose_category_error, delete_msg_error,
+                      rename_category_error, rename_category_msg,
+                      rename_category_success)
 from states import UserState
 
 

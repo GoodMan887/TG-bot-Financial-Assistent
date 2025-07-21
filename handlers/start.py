@@ -1,9 +1,9 @@
 from telebot import TeleBot, types
 
 import messages
-from states import UserState
 from config import key_board_buttons
 from database.user_data import add_or_update_user
+from states import UserState
 
 
 def handle_command_start(message: types.Message, bot: TeleBot):

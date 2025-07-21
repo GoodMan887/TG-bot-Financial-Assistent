@@ -1,10 +1,12 @@
 import matplotlib
+
 matplotlib.use('Agg') # Установка бэкенда Matplotlib перед импортом pyplot
-import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
-from math import ceil
 import os
 import tempfile
+from math import ceil
+
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
 
 
 def generate_expense_charts(data: dict, save_dir: str = 'temp_charts') -> list[str]:

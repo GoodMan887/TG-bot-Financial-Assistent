@@ -1,5 +1,6 @@
-from database.connection import connect_db
 import psycopg2
+
+from database.connection import connect_db
 
 
 def get_category_name_by_id(category_id: int) -> str | None:

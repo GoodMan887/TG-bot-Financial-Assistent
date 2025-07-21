@@ -1,6 +1,7 @@
-import matplotlib.pyplot as plt
-from itertools import cycle, islice
 import tempfile
+from itertools import cycle, islice
+
+import matplotlib.pyplot as plt
 
 
 def generate_top_categories_pie(data: dict) -> str:
