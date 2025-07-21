@@ -31,13 +31,10 @@
 <img src="images/basic_expense_interval.jpg" width="45%">
 <img src="images/basic_expense.jpg" width="45%">
 
-### Диаграммы
-
-#### Столбчатая диаграмма (общая статистика)
-<img src="images/full_statistics.jpg" width="45%">
-
-#### Круговая диаграмма (основные траты)
-<img src="images/full_basic_expense.jpg" width="45%">
+### Удаление категорий
+<img src="images/delete_category_1.jpg" width="45%">
+<img src="images/delete_category_2.jpg" width="45%">
+<img src="images/statistics_after_delete.jpg" width="45%">
 
 ### 🚀 Как запустить
 
