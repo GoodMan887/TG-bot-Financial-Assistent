@@ -5,11 +5,12 @@ from dotenv import load_dotenv
 # Загружаем переменные окружения из файла .env
 load_dotenv()
 
+
 def connect_db():
-    return psycopg2.connect(
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT")
-    )
+    database_url = os.getenv("DB_URL")
+
+    if not database_url:
+        raise ValueError("DB_URL environment variable is not set.")
+
+    conn = psycopg2.connect(database_url)
+    return conn
